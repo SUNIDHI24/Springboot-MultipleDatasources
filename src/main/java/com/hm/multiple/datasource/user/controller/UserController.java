@@ -38,5 +38,13 @@ public class UserController {
 	public User addUser(@RequestBody User user) {
 		return userService.addUser(user);
 	}
+        //feature-2
+	@GetMapping("/getUser/{id}")
+	public Optional<User> findUser(@PathVariable int id) {
+		return userService.getUserById(id);
+	}
+
+	
+
 
 }
