@@ -37,6 +37,14 @@ public class BookController {
 	public Book addBook(@RequestBody Book book) {
 		return bookService.addBook(book);
 	}
+	//feature-1
+	@GetMapping("/getBook/{bookId}")
+	
+	public Optional<Book> findBook(@PathVariable int bookId) {
+		return bookService.getBookById(bookId);
+	}
+
+
 	
 
 }
